@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local_data_models="clr-namespace:MOROPO.CPCC.CinemaStreet.Arsmart.Models.Page"
+    xmlns:local_ui_converters="clr-namespace:MOROPO.CPCC.CinemaStreet.Arsmart.UI.Converters"
+    xmlns:local_ui_views="clr-namespace:MOROPO.CPCC.CinemaStreet.Arsmart.UI.Views"
+    xmlns:sscxftoolkit_presentation_converters="clr-namespace:SmartSolucionesCuba.XFToolKit.Presentation.Converters;assembly=SmartSolucionesCuba.XFToolKit.Presentation"
+    xmlns:ffimageloading_forms_views="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    x:Class="MOROPO.CPCC.CinemaStreet.Arsmart.UI.Pages.MainPage"
+    x:DataType="local_data_models:MainPageModel"
+    Title="Mural Carteles del Cine"
+    BackgroundColor="White"
+    x:Name="Root">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local_ui_converters:TargetInfoDataToPosterImageHeightConverter x:Key="TargetInfoDataToPosterImageHeightConverter" Page="{Reference Root}" />
+            
+            <sscxftoolkit_presentation_converters:NotNullToBooleanConverter x:Key="NotNullToBooleanConverter" />
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style x:Key="CaptionLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="DimGray" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Acerca de"
+            Order="Primary"
+            Clicked="AboutToolbarItem_Clicked">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="Material Design Icons" Glyph="&#xF2FD;" Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem 
+            Text="Ayuda"
+            Order="Primary"
+            Clicked="HelpToolbarItem_Clicked">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="Material Design Icons" Glyph="&#xF625;" Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid
+            HorizontalOptions="End" VerticalOptions="End"
+            WidthRequest="320" HeightRequest="103">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <BoxView
+                Grid.Column="1"
+                Margin="2"
+                Color="White" />
+            <ffimageloading_forms_views:CachedImage
+                Grid.ColumnSpan="2"
+                x:Name="CoverImage"
+                Aspect="AspectFit"
+                Success="CoverImage_Success"
+                RetryCount="3"
+                CacheType="None" />
+            <Label
+                Grid.Column="1"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Padding="20,0"
+                FontSize="14"
+                TextColor="White"
+                Text="Enfoque hacie el mural para iniciar la interacción" />
+        </Grid>
+        <ScrollView
+            x:Name="MainScrollView" 
+            IsVisible="{Binding TargetInfo, Converter={StaticResource NotNullToBooleanConverter}}"
+            BackgroundColor="#77000000">
+            <StackLayout Orientation="Vertical" Spacing="0">
+                <BoxView Color="Transparent" HeightRequest="240" />
+                <BoxView Color="Transparent" VerticalOptions="FillAndExpand" />
+                <Frame
+                    Margin="16,0" Padding="16"
+                    BackgroundColor="WhiteSmoke">
+                    <StackLayout 
+                        Orientation="Vertical"
+                        Spacing="16">
+                        <Image
+                            VerticalOptions="Start"
+                            HeightRequest="{Binding TargetInfo, Converter={StaticResource TargetInfoDataToPosterImageHeightConverter}}"
+                            Source="{Binding TargetInfo.PosterImage}" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="24"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding TargetInfo.Title}" />
+                        <Label Text="{Binding TargetInfo.Summary}" />
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Genre, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Género" />
+                            <Label Text="{Binding TargetInfo.Genre}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Year, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Año" />
+                            <Label Text="{Binding TargetInfo.Year}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Duration, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Duración" />
+                            <Label Text="{Binding TargetInfo.Duration, StringFormat='{0:F2} m'}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Direction, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Dirección" />
+                            <Label Text="{Binding TargetInfo.Direction}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Screenplay, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Guión" />
+                            <Label Text="{Binding TargetInfo.Screenplay}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Production, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Producción" />
+                            <Label Text="{Binding TargetInfo.Production}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Photography, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Fotografía" />
+                            <Label Text="{Binding TargetInfo.Photography}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Edition, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Edición" />
+                            <Label Text="{Binding TargetInfo.Edition}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Music, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Música" />
+                            <Label Text="{Binding TargetInfo.Music}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Audio, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Sonido" />
+                            <Label Text="{Binding TargetInfo.Audio}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.ArtManager, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Dirección de Arte" />
+                            <Label Text="{Binding TargetInfo.ArtManager}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Cast, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Intérpretes" />
+                            <Label Text="{Binding TargetInfo.Cast}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetInfo.Awards, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Orientation="Vertical"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Premios y reconocimientos" />
+                            <Label Text="{Binding TargetInfo.Awards}" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+        <local_ui_views:BusyView />
+    </Grid>
+</ContentPage>

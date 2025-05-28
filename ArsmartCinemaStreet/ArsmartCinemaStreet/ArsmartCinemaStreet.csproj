@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+		<ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+		<AssemblyName>MOROPO.CPCC.CinemaStreet.Arsmart</AssemblyName>
+		<RootNamespace>MOROPO.CPCC.CinemaStreet.Arsmart</RootNamespace>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Font\materialdesignicons-webfont.ttf" />
+	  <None Remove="Resources\Image\about.jpg" />
+	  <None Remove="Resources\Image\cover.png" />
+	  <None Remove="Resources\Image\poster-13.jpg" />
+	  <None Remove="Resources\Image\poster-14.jpg" />
+	  <None Remove="Resources\Image\poster-15.jpg" />
+	  <None Remove="Resources\Image\poster-17.jpg" />
+	  <None Remove="Resources\Image\poster-19.jpg" />
+	  <None Remove="Resources\Image\poster-20.jpg" />
+	  <None Remove="Resources\Image\poster-3.jpg" />
+	  <None Remove="Resources\Image\poster-4.jpg" />
+	  <None Remove="Resources\Image\poster-5.jpg" />
+	  <None Remove="Resources\Image\poster-6.jpg" />
+	  <None Remove="Resources\Image\proy-1-1.jpg" />
+	  <None Remove="Resources\Image\proy-2-1.jpg" />
+	  <None Remove="Resources\Vector\cinema-street-brand-cover.svg" />
+	  <None Remove="Resources\Vector\cover.svg" />
+	  <None Remove="Resources\Vector\footer.svg" />
+	  <None Remove="Resources\Vector\moropo-logo-light.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Font\materialdesignicons-webfont.ttf" />
+	  <EmbeddedResource Include="Resources\Image\about.jpg" />
+	  <EmbeddedResource Include="Resources\Image\cover.png" />
+	  <EmbeddedResource Include="Resources\Image\poster-17.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-19.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-15.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-14.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-3.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-4.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-20.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-6.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-13.jpg" />
+	  <EmbeddedResource Include="Resources\Image\poster-5.jpg" />
+	  <EmbeddedResource Include="Resources\Image\proy-1-1.jpg" />
+	  <EmbeddedResource Include="Resources\Image\proy-2-1.jpg" />
+	  <EmbeddedResource Include="Resources\Vector\cover.svg" />
+	  <EmbeddedResource Include="Resources\Vector\cinema-street-brand-cover.svg" />
+	  <EmbeddedResource Include="Resources\Vector\footer.svg" />
+	  <EmbeddedResource Include="Resources\Vector\moropo-logo-light.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AltroEasyAR" Version="4.6.4" />
+		<PackageReference Include="SSCXFToolKit.Mvvm" Version="0.4.10-alpha" />
+		<PackageReference Include="SSCXFToolKit.Presentation" Version="0.6.4" />
+		<PackageReference Include="UrhoSharp.Forms" Version="1.9.67" />
+		<PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+		<PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="UI\Pages\AboutPage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="UI\Pages\HelpPage.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
+	</ItemGroup>
+	
+</Project>

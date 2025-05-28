@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MOROPO.CPCC.CinemaStreet.Arsmart.UI.Pages.HelpPage"
+    Title="Ayude de la Aplicación"
+    BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid Padding="16">
+            <StackLayout
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                <Label 
+                    Text="Sección en construcción!"
+                    HorizontalTextAlignment="Center" />
+                <Label 
+                    HorizontalTextAlignment="Center"
+                    FontSize="14"
+                    TextColor="DimGray"
+                    Text="Este contenido será construido una vez que la aplicación esté aprovada para su versión definitiva para incorporar contenido definitivo." />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

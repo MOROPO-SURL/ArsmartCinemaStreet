@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MOROPO.CPCC.CinemaStreet.Arsmart.UI.Pages.AboutPage"
+    Title="Acerca de la Aplicación"
+    BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Spacing="0">
+                <Image x:Name="FeatureImage" />
+                <StackLayout Padding="16" Spacing="16">
+                    <Label Text="Nuestra aplicación utiliza la realidad aumentada para acercarte al mural físico ubicado en la Calle de los Cines de Camagüey, el cual rinde homenaje a los carteles cubanos de cine, reconocidos por la UNESCO como patrimonio documental de la humanidad. Con un enfoque sencillo y accesible, la herramienta te permite explorar información básica sobre este importante legado cultural mediante interacciones digitales que enriquecen la visita sin complicarla." />
+                    <Label Text="Este proyecto es una iniciativa colaborativa, que se desarrolla en el marco del Proyecto Callejón de los Milagros del Centro Provincial del Cine de Camagüey y cuenta con la participación de diversas entidades comprometidas con el impulso cultural y tecnológico del escenario, encaminandose a una visión de Calle Inteligente de los Cines. Entre las que se destacan:" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="MOROPO S.U.R.L. (desarrollador principal)" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="Proyecto de Desarrollo Local Co-Lab Camagüey" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="Unión de Informáticos de Cuba en Camagüey" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="Enciclopedia del Audiovisual Cubano (ENDAC)" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="Enciclopedia del Audiovisual Cubano (ENDAC)" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="Portal Cubacine del ICAIC" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="-" />
+                        <Label Text="Cultura Provincial de Camagüey" />
+                    </StackLayout>
+                    <Label Text="El objetivo de esta iniciativa es ofrecer una forma modesta y práctica de conocer y valorar la historia del cine cubano en un espacio urbano emblemático. La aplicación se presenta como una herramienta complementaria para que tanto residentes como visitantes puedan apreciar, de manera interactiva pero sin exageraciones, la importancia de un patrimonio que sigue contando historias del pasado a través de imágenes y diseño." />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

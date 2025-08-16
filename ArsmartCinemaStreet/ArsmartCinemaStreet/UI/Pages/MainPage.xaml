@@ -92,7 +92,43 @@
                         <Image
                             VerticalOptions="Start"
                             HeightRequest="{Binding TargetInfo, Converter={StaticResource TargetInfoDataToPosterImageHeightConverter}}"
-                            Source="{Binding TargetInfo.PosterImage}" />
+                            Source="{Binding TargetInfo.PosterImage}" 
+                            BackgroundColor="DarkGray"/>
+                        <StackLayout
+                            IsVisible="{Binding TargetInfo.Author, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Autor del Cartel" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image
+                                    Grid.Column="0"
+                                    Grid.RowSpan="2"
+                                    VerticalOptions="Start"
+                                    HeightRequest="75"
+                                    WidthRequest="75" 
+                                    Source="{Binding TargetInfo.Author.FeatureImage}" />
+                                <Label 
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    Text="{Binding TargetInfo.Author.Name}" />
+                                <Button
+                                    Grid.Column="1"
+                                    Grid.Row="1"
+                                    HorizontalOptions="Start"
+                                    Text="Detalles"
+                                    BackgroundColor="Accent"
+                                    Clicked="AuthorDetail_Button_Clicked"/>
+                            </Grid>
+                        </StackLayout>
                         <Label
                             FontAttributes="Bold"
                             FontSize="24"
@@ -204,6 +240,59 @@
                                 Text="Premios y reconocimientos" />
                             <Label Text="{Binding TargetInfo.Awards}" />
                         </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+        <ScrollView
+            x:Name="AuthorScrollView" 
+            IsVisible="{Binding TargetAuthor, Converter={StaticResource NotNullToBooleanConverter}}"
+            BackgroundColor="#77000000">
+            <StackLayout Orientation="Vertical" Spacing="0">
+                <BoxView Color="Transparent" HeightRequest="240" />
+                <BoxView Color="Transparent" VerticalOptions="FillAndExpand" />
+                <Frame
+                    Margin="32,0" Padding="16"
+                    BackgroundColor="WhiteSmoke">
+                    <StackLayout 
+                        Orientation="Vertical"
+                        Spacing="16">
+                        <Image
+                            Aspect="AspectFill"
+                            VerticalOptions="Start"
+                            HeightRequest="{Binding Source={RelativeSource Mode=Self}, Path=Width}"
+                            Source="{Binding TargetAuthor.FeatureImage}" />
+                        
+                        <StackLayout
+                            IsVisible="{Binding TargetAuthor.Name, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Nombre" />
+                            <Label Text="{Binding TargetAuthor.Name}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetAuthor.Context, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label Text="{Binding TargetAuthor.Context}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetAuthor.Sumary, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Resumen" />
+                            <Label Text="{Binding TargetAuthor.Sumary}" />
+                        </StackLayout>
+                        <StackLayout 
+                            IsVisible="{Binding TargetAuthor.About, Converter={StaticResource NotNullToBooleanConverter}}"
+                            Spacing="0">
+                            <Label 
+                                Style="{StaticResource CaptionLabelStyle}"
+                                Text="Detalles" />
+                            <Label Text="{Binding TargetAuthor.About}" />
+                        </StackLayout>
+                        
                     </StackLayout>
                 </Frame>
             </StackLayout>

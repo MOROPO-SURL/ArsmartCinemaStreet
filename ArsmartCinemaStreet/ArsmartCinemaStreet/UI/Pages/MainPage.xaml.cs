@@ -44,10 +44,18 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.UI.Pages
         {
             if (ConcreteBindingContext.TargetInfo == null) return false;
 
-            ConcreteBindingContext.TargetInfo = null;
+            if (ConcreteBindingContext.TargetAuthor == null)
+            {
+                ConcreteBindingContext.TargetInfo = null;
 
-            MainScrollView.ScrollToAsync(0, 0, false);
-
+                MainScrollView.ScrollToAsync(0, 0, false);
+            }
+            else
+            {
+                ConcreteBindingContext.TargetAuthor = null;
+                AuthorScrollView.ScrollToAsync(0, 0, false);
+            }
+             
             return true;
         }
 
@@ -89,47 +97,59 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.UI.Pages
 
         private void CoverImage_Success(object sender, FFImageLoading.Forms.CachedImageEvents.SuccessEventArgs e)
         {
-            GetPermissions().ContinueWith(task =>
+            System.Threading.Tasks.Task.Delay(5000).ContinueWith(_ =>
             {
                 Dispatcher.BeginInvokeOnMainThread(() =>
                 {
-                    if (!task.Result)
+                    GetPermissions().ContinueWith(task =>
                     {
-                        DisplayAlert("Aviso", "Es necesario brindar permisos de uso de la cámara a esta aplicación par asu correcto funcionamiento.", "Aceptar");
-                    }
-                    else
-                    {
-                        if (ConcreteBindingContext.IsBusy) return;
-
-                        ConcreteBindingContext.IsBusy = true;
-
-                        System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
+                        Dispatcher.BeginInvokeOnMainThread(() =>
                         {
-                            Dispatcher.BeginInvokeOnMainThread(() =>
+                            if (!task.Result)
                             {
-                                ConcreteBindingContext.IsBusy = false;
+                                DisplayAlert("Aviso", "Es necesario brindar permisos de uso de la cámara a esta aplicación para su correcto funcionamiento.", "Aceptar");
+                            }
+                            else
+                            {
+                                if (ConcreteBindingContext.IsBusy) return;
 
-                                var urhoSurface = new Urho.Forms.UrhoSurface();
+                                ConcreteBindingContext.IsBusy = true;
 
-                                var urhoApplicationOptions = new Urho.ApplicationOptions()
+                                System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
                                 {
-                                    ResourcePaths = new[] { "UrhoData" },
-                                    Orientation = Urho.ApplicationOptions.OrientationType.LandscapeAndPortrait
-                                };
+                                    Dispatcher.BeginInvokeOnMainThread(() =>
+                                    {
+                                        ConcreteBindingContext.IsBusy = false;
 
-                                (Content as Xamarin.Forms.Grid).Children.Insert(0, urhoSurface);
+                                        var urhoSurface = new Urho.Forms.UrhoSurface();
 
-                                urhoSurface.Show<Env3D.Presenters.MainARPresenter>(urhoApplicationOptions).ContinueWith(task =>
-                                {
-                                    env3DPresenter = task.Result;
+                                        var urhoApplicationOptions = new Urho.ApplicationOptions()
+                                        {
+                                            ResourcePaths = new[] { "UrhoData" },
+                                            Orientation = Urho.ApplicationOptions.OrientationType.LandscapeAndPortrait
+                                        };
 
-                                    env3DPresenter.TargetInfoPresentRequest += MainARPresenter_TargetInfoPresentRequested;
+                                        (Content as Xamarin.Forms.Grid).Children.Insert(0, urhoSurface);
+
+                                        urhoSurface.Show<Env3D.Presenters.MainARPresenter>(urhoApplicationOptions).ContinueWith(task =>
+                                        {
+                                            env3DPresenter = task.Result;
+
+                                            env3DPresenter.TargetInfoPresentRequest += MainARPresenter_TargetInfoPresentRequested;
+                                        });
+                                    });
                                 });
-                            });
+                            }
                         });
-                    }
+                    });
                 });
-            });
+            });                        
         }
+
+        private void AuthorDetail_Button_Clicked(object sender, System.EventArgs e)
+        {
+            ConcreteBindingContext.TargetAuthor = ConcreteBindingContext.TargetInfo.Author; 
+        }
+
     }
 }

@@ -6,6 +6,8 @@
 
         public Xamarin.Forms.ImageSource PosterImage { get; set; }
 
+        public AuthorDataModel Author { get; set; }
+
         public int PosterWidth { get; set; }
 
         public int PosterHeight { get; set; }

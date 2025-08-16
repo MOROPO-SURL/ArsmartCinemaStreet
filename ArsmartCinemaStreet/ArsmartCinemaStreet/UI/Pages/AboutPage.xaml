@@ -38,10 +38,6 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="-" />
-                        <Label Text="Enciclopedia del Audiovisual Cubano (ENDAC)" />
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="-" />
                         <Label Text="Portal Cubacine del ICAIC" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">

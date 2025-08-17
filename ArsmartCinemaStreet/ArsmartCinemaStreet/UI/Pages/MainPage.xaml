@@ -65,7 +65,6 @@
                 x:Name="CoverImage"
                 Aspect="AspectFit"
                 Success="CoverImage_Success"
-                RetryCount="3"
                 CacheType="None" />
             <Label
                 Grid.Column="1"
@@ -262,7 +261,6 @@
                             VerticalOptions="Start"
                             HeightRequest="{Binding Source={RelativeSource Mode=Self}, Path=Width}"
                             Source="{Binding TargetAuthor.FeatureImage}" />
-                        
                         <StackLayout
                             IsVisible="{Binding TargetAuthor.Name, Converter={StaticResource NotNullToBooleanConverter}}"
                             Spacing="0">

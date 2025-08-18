@@ -17,19 +17,18 @@
         <ScrollView Orientation="Vertical">
             <StackLayout Spacing="0">
                 <StackLayout Padding="16" Spacing="16">
-                    <Label Text="Para comenzar a utilizar nuestra aplicación luego de instalarla, primeramente otorgue los permisos de uso de la cámara a la misma." />
-                    <Image x:Name="PermisionImage"/>
-                    <Label Text="Apunte la cámara de su celular hacia el Mural. Verá en su pantalla como se activa una pantalla interactiva enmarcando los carteles del Mural." />
-                    <Image x:Name="MuralImage"/>
-                    <Label Text="Seguidamente selecione en la pantalla el cartel de su preferencia." />
-                    <Image x:Name="CartelImage"/>
-                    <Label Text="Luego de selecionada le saldrá una nueva ventana con el Cartel escogido, y toda la información relacionada con el mismo, desde su autor hasta lo que representa (ya sea una película, documental o información sobre el cine en general)."/>
-                    <Image x:Name="InformationImage"/>
+                    <Label Text="Para comenzar a utilizar nuestra aplicación luego de instalarla, primeramente otorgue los permisos de uso de la cámara a la misma. Esto permitirá utilizar la camará del dispositivo durante el proceso de Realidad Aumentada que permitirá reconocer el Mural de los Carteles de Cine e identificar las zonas interactivas disponibles." />
+                    <Image x:Name="PermisionImage" WidthRequest="240" />
+                    <Label Text="Apunte la cámara de su celular hacia el Mural de los Carteles del Cine para comenzar la interacción con el entorno y obtener una experiencia enriquecida. Verá en su pantalla como se activa una pantalla interactiva enmarcando los carteles y zonas informativas disponibles." />
+                    <Image x:Name="MuralImage" HeightRequest="360" Rotation="90" Margin="0,0" />
+                    <Label Text="Seguidamente selecione en la pantalla el el marco de indicación de zona interactiva del Mural de Carteles del Cine deseada para obtener información adicional disponible en la aplicación." />
+                    <Image x:Name="CartelImage" WidthRequest="240" />
+                    <Label Text="Luego de selecionada le saldrá una nueva ventana con toda la información relacionada con la zona seleccionada, que puede incluir información autor del cartel en caso de ser una obra audiovisual (ya sea una película, documental o información sobre el cine en general)."/>
+                    <Image x:Name="InformationImage" WidthRequest="240" />
                     <Label Text="En el botón de Detalles que esta debajo del autor del Cartel, podrá acceder a información sobre la vida del Autor."/>
-                    <Image x:Name="DetailsImage"/>
-                    <Image x:Name="DetailsAutorImage"/>
+                    <Image x:Name="DetailsImage" WidthRequest="240"/>
+                    <Image x:Name="DetailsAutorImage" WidthRequest="240" />
                     <Label Text="Además nuestra aplicación cuenta con 2 secciones más: la Sección de Acerca de y la Sección de Ayuda, en la que usted se encuentra en estos momentos."/>
-
                 </StackLayout>
             </StackLayout>
         </ScrollView>

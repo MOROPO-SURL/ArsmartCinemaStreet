@@ -10,7 +10,7 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.UI.Pages
             InitializeComponent();
 
             PermisionImage.Source = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ayuda-1.jpg");
-            MuralImage.Source = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ayuda-20.jpg");
+            MuralImage.Source = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ayuda-2.jpg");
             CartelImage.Source = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ayuda-3.jpg");
             InformationImage.Source = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ayuda-4.jpg");
             DetailsImage.Source = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ayuda-5.jpg");

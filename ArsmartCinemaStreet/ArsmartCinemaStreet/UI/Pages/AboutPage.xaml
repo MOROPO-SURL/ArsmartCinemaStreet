@@ -18,7 +18,7 @@
             <StackLayout Spacing="0">
                 <Image x:Name="FeatureImage" />
                 <StackLayout Padding="16" Spacing="16">
-                    <Label Text="Nuestra aplicación utiliza la realidad aumentada para acercarte al mural físico ubicado en la Calle de los Cines de Camagüey, el cual rinde homenaje a los carteles cubanos de cine, reconocidos por la UNESCO como patrimonio documental de la humanidad. Con un enfoque sencillo y accesible, la herramienta te permite explorar información básica sobre este importante legado cultural mediante interacciones digitales que enriquecen la visita sin complicarla." />
+                    <Label Text="Nuestra aplicación utiliza la realidad aumentada para acercarte al mural físico ubicado en la Calle de los Cines de Camagüey, el cual rinde homenaje a los carteles cubanos de cine, reconocidos por la UNESCO como patrimonio documental de la humanidad. Con un enfoque sencillo y accesible, la herramienta te permite explorar información sobre este importante legado cultural mediante interacciones digitales que brindan una experiencia enriquecida en este importante espacio urbano." />
                     <Label Text="Este proyecto es una iniciativa colaborativa, que se desarrolla en el marco del Proyecto Callejón de los Milagros del Centro Provincial del Cine de Camagüey y cuenta con la participación de diversas entidades comprometidas con el impulso cultural y tecnológico del escenario, encaminandose a una visión de Calle Inteligente de los Cines. Entre las que se destacan:" />
                     <StackLayout Orientation="Horizontal">
                         <Label Text="-" />

@@ -22,7 +22,6 @@
 	  <None Remove="Resources\Image\Antonio_Perez_Niko.jpg" />
 	  <None Remove="Resources\Image\Ayuda-1.jpg" />
 	  <None Remove="Resources\Image\Ayuda-2.jpg" />
-	  <None Remove="Resources\Image\Ayuda-20.jpg" />
 	  <None Remove="Resources\Image\Ayuda-3.jpg" />
 	  <None Remove="Resources\Image\Ayuda-4.jpg" />
 	  <None Remove="Resources\Image\Ayuda-5.jpg" />
@@ -30,6 +29,8 @@
 	  <None Remove="Resources\Image\Ayuda-7.jpg" />
 	  <None Remove="Resources\Image\cover.png" />
 	  <None Remove="Resources\Image\Eduardo_Muñoz.jpg" />
+	  <None Remove="Resources\Image\Erick_Grass.jpg" />
+	  <None Remove="Resources\Image\Ernesto_Padron.jpg" />
 	  <None Remove="Resources\Image\Giselle_Monzon.jpg" />
 	  <None Remove="Resources\Image\Julio_Eloy.jpg" />
 	  <None Remove="Resources\Image\Pablo_Rene_Azcuy.jpg" />
@@ -74,7 +75,6 @@
 	  <EmbeddedResource Include="Resources\Image\Antonio_Perez_Niko.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Ayuda-1.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Ayuda-2.jpg" />
-	  <EmbeddedResource Include="Resources\Image\Ayuda-20.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Ayuda-3.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Ayuda-4.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Ayuda-5.jpg" />
@@ -82,6 +82,8 @@
 	  <EmbeddedResource Include="Resources\Image\Ayuda-7.jpg" />
 	  <EmbeddedResource Include="Resources\Image\cover.png" />
 	  <EmbeddedResource Include="Resources\Image\Eduardo_Muñoz.jpg" />
+	  <EmbeddedResource Include="Resources\Image\Erick_Grass.jpg" />
+	  <EmbeddedResource Include="Resources\Image\Ernesto_Padron.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Giselle_Monzon.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Julio_Eloy.jpg" />
 	  <EmbeddedResource Include="Resources\Image\Pablo_Rene_Azcuy.jpg" />

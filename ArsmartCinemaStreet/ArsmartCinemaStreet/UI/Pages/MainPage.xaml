@@ -95,7 +95,7 @@
                             BackgroundColor="DarkGray"/>
                         <StackLayout
                             IsVisible="{Binding TargetInfo.Author, Converter={StaticResource NotNullToBooleanConverter}}"
-                            Spacing="0">
+                            Spacing="4">
                             <Label 
                                 Style="{StaticResource CaptionLabelStyle}"
                                 Text="Autor del Cartel" />
@@ -112,8 +112,9 @@
                                     Grid.Column="0"
                                     Grid.RowSpan="2"
                                     VerticalOptions="Start"
-                                    HeightRequest="75"
-                                    WidthRequest="75" 
+                                    HeightRequest="80"
+                                    WidthRequest="80" 
+                                    BackgroundColor="DarkGray"
                                     Source="{Binding TargetInfo.Author.FeatureImage}" />
                                 <Label 
                                     Grid.Column="1"
@@ -124,6 +125,7 @@
                                     Grid.Row="1"
                                     HorizontalOptions="Start"
                                     Text="Detalles"
+                                    TextColor="White"
                                     BackgroundColor="Accent"
                                     Clicked="AuthorDetail_Button_Clicked"/>
                             </Grid>
@@ -260,6 +262,7 @@
                             Aspect="AspectFill"
                             VerticalOptions="Start"
                             HeightRequest="{Binding Source={RelativeSource Mode=Self}, Path=Width}"
+                            BackgroundColor="DarkGray"
                             Source="{Binding TargetAuthor.FeatureImage}" />
                         <StackLayout
                             IsVisible="{Binding TargetAuthor.Name, Converter={StaticResource NotNullToBooleanConverter}}"

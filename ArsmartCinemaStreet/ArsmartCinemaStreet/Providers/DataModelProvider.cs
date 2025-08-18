@@ -112,7 +112,7 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.Providers
             {
                 Id = System.Guid.NewGuid(),
                 Name = "Ernesto Ferrand.",
-                FeatureImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.proy-1-1.jpg"), //TODO CAMBIAR IMAGEN
+                //FeatureImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.proy-1-1.jpg"),
                 Context = "n. La Habana, Cuba, 1968.",
                 Sumary = "Graduado en diseño gráfico en el Instituto Superior de Diseño Industrial (ISDI) en La Habana. Sus obras han ganado reconocimiento y premios internacionales.",
                 About = string.Format("Comenzó sus estudios formales de diseño gráfico en la Escuela Experimental de Dibujo y Grabado de La Habana en 1982, a la temprana edad de 14 años. En 1991, se graduó de la escuela de arte más prominente de Cuba, la Academia de Bellas Artes de San Alejandro, con un título en Grabado, y luego completó una licenciatura de 5 años en diseño gráfico en el Instituto Superior de Diseño Industrial (ISDI) en La Habana.{0}{0}Sus obras han ganado reconocimiento y premios internacionales. Su arte de carteles y trabajo fotográfico se ha exhibido en numerosos espacios colectivos a nivel mundial, incluyendo la 4ª, 5ª y 6ª Bienal Internacional del Cartel celebrada en el Museo Franz Mayer, México DF y la 2ª Exposición Internacional de Carteles 2001 en Ningbo, China, entre otras.", System.Environment.NewLine)
@@ -123,8 +123,35 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.Providers
                 Name = "Antonio Pérez González.",
                 FeatureImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Antonio_Perez_Niko.jpg"), 
                 Context = "n. La Habana, 1941.",
-                Sumary = "es reconocido como uno de los más importantes y prolíficos diseñadores de carteles. Diseñador gráfico. Licenciado en Historia del Arte General de la Universidad de la Habana. En el año 1988 llegó a México donde trabaja y reside actualmente.",
-                About = string.Format("Comenzó a trabajar en el ICAIC en el año 1968, en el departamento de Publicidad o  affiches. Tiene en su currículum una amplia experiencia docente como profesor de diseño en diferentes instituciones mexicanas y cubanas.{0}{0}Es miembro actual de:{0}{0}-International Council of Graphic Design Association (ICOGRADA) Inglaterra.{0}-Miembro Fundador y Honorario. Asociación de Diseñadores Gráficos “Amarillo”. Centro de Diseño. Xalapa, Veracruz.{0}-Unión de Escritores y Artistas de Cuba (UNEAC).{0}{0}Ha obtenido numerosos premios y reconocimientos, entre ellos:{0}{0}-Distinción “Por la Cultura Nacional”. La Habana, Cuba 1983.{0}-Selección del Cartel “Día de la Tierra”. Colección Permanente del Museo de Arte Moderno, Denver, Colorado, Estados Unidos 1995.{0}-Homenaje a 4 Diseñadores Cubanos. Poesía y Diseño. Instituto Cultural de Aguascalientes y Diseñadores del DF y Aguascalientes. Aguascalientes 2003.{0}-Medalla de Excelencia José Guadalupe Posada. Bienal Internacional de  Carteles México 2006.\r\n.", System.Environment.NewLine)
+                Sumary = "Es reconocido como uno de los más importantes y prolíficos diseñadores de carteles. Diseñador gráfico. Licenciado en Historia del Arte General de la Universidad de la Habana. En el año 1988 llegó a México donde trabaja y reside actualmente.",
+                About = string.Format("Comenzó a trabajar en el ICAIC en el año 1968, en el departamento de Publicidad o  affiches. Tiene en su currículum una amplia experiencia docente como profesor de diseño en diferentes instituciones mexicanas y cubanas.{0}{0}Es miembro actual de:{0}{0}-International Council of Graphic Design Association (ICOGRADA) Inglaterra.{0}-Miembro Fundador y Honorario. Asociación de Diseñadores Gráficos “Amarillo”. Centro de Diseño. Xalapa, Veracruz.{0}-Unión de Escritores y Artistas de Cuba (UNEAC).{0}{0}Ha obtenido numerosos premios y reconocimientos, entre ellos:{0}{0}-Distinción “Por la Cultura Nacional”. La Habana, Cuba 1983.{0}-Selección del Cartel “Día de la Tierra”. Colección Permanente del Museo de Arte Moderno, Denver, Colorado, Estados Unidos 1995.{0}-Homenaje a 4 Diseñadores Cubanos. Poesía y Diseño. Instituto Cultural de Aguascalientes y Diseñadores del DF y Aguascalientes. Aguascalientes 2003.{0}-Medalla de Excelencia José Guadalupe Posada. Bienal Internacional de  Carteles México 2006.", System.Environment.NewLine)
+            };
+            var authorErnestoP = new AuthorDataModel
+            {
+                Id = System.Guid.NewGuid(),
+                Name = "Ernesto Padrón.",
+                FeatureImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Ernesto_Padron.jpg"),
+                Context = "n. Cárdenas, Matanzas, 1948.",
+                Sumary = "Graduado de Periodismo en la Universidad de La Habana. Diseñador, guionista y realizador audiovisual ostenta, entre otros reconocimientos, la Distinción por la Cultura Nacional, Ministerio de Cultura (1995) y el Diploma de Mérito Artístico del Instituto Superior de Arte (2002).",
+                About = string.Format("Fue director de la revistas para niños Zunzún y Bijirita desde 1982 hasta 1998. A partir de ese año comenzó a trabajar en los Estudios de Animación del ICAIC como guionista y director, donde ha realizado numerosas obras. Es autor de las series de dibujos animados: Los ¿Por qué?, Para Curiosos y Conociendo a Martí. Fue co-argumentista del filme de su hermano Juan Padrón: Vampiros en La Habana, y fue director asistente en Más Vampiros en La Habana.{0}{0}En julio de 2014 estrenó Meñique, su primer largometraje, que fue, además, el primero en animación 3D en Cuba. Ha obtenido numerosos premios y reconocimientos, entre ellos el segundo Premio del Prix Jeunese, Chile (2001), Premio en el Festival de Películas para Niños de Guayana, Venezuela (2002), Premio Coral en Animación del 36 Festival Internacional del Nuevo Cine Latinoamericano, 2014. Fue Premio Mestre Mateo de la Academia Gallega del Audiovisual (2014), nominado a los Premios Platino (2015), y a los Premios Goya (2016).", System.Environment.NewLine)
+            };
+            var authorErick = new AuthorDataModel
+            {
+                Id = System.Guid.NewGuid(),
+                Name = "Erick Grass.",
+                FeatureImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.Erick_Grass.jpg"),
+                Context = "n. La Habana en el año 1966.",
+                Sumary = "Es graduado de la escuela de artes plásticas “San Alejandro” y del Instituto Superior de Arte, en la especialidad de pintura y dibujo.",
+                About = string.Format("Se desempeñó como diseñador escenográfico, de vestuario y de luces en el Ballet de Camagüey, bajo la dirección de Fernando Alonso. A partir de 1993 diseña para el Centro Pro-danza y en 1994 se incorpora a la Opera de Cuba para la que realiza los decorados de “El elixir de amor” de Donizetti, entre otras obras.{0}{0}Ha alternado su labor como director de arte y decorador cinematográfico con el teatro, la danza moderna y la televisión, para los que ha diseñado vestuario y escenografía indistintamente. Ha fungido como diseñador general del Ballet Lizt Alfonso, profesor de diseño escénico del Instituto Superior de Arte (ISA) y diseñador del Ballet Nacional de Cuba.", System.Environment.NewLine)
+            };
+            var authorJose = new AuthorDataModel
+            {
+                Id = System.Guid.NewGuid(),
+                Name = "José Lucci.",
+                //FeatureImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.proy-1-1.jpg"),
+                //Context = "n. La Habana, Cuba, 1968.",
+                //Sumary = ".",
+                About = string.Format("Como diseñador incorporó la técnica del papel recortado, utilizada con posterioridad por otros diseñadores.", System.Environment.NewLine)
             };
 
             targetInfos = new Models.Data.TargetInfoDataModel[]
@@ -154,6 +181,7 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.Providers
                     PosterImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.poster-3.jpg"),
                     PosterWidth = 183,
                     PosterHeight = 275,
+                    Author = authorJose,
                     Summary = string.Format("El Noticiero ICAIC Latinoamericano surge en 1960 y se diferencia de todos los realizados con anterioridad porque reseña la información visual bajo nuevos preceptos y sin incluir anuncios comerciales. Su frecuencia es semanal y de aproximadamente diez minutos de duración, aunque en determinadas ocasiones puede llegar a tener una duración de veinte minutos.{0}{0}Fundado por Alfredo Guevara y Santiago Álvarez, que es su director general y principal realizador desde sus inicios hasta su cierre, junto con los camarógrafos Arturo Agramonte, Dervis Pastor Espinosa y el narrador Julio Batista. Durante sus treinta años de existencia, este noticiero constituye, sin duda, una escuela en la que muchos jóvenes directores tienen sus primeras experiencias para después pasar a filmar documentales y largometrajes de ficción como son Manuel Pérez, Miguel Torres, Pastor Vega, Rolando Díaz, Daniel Díaz Torres, Fernando Pérez y Francisco Puñal Suárez, entre otros. También los editores Norma Torrado, Julia Yip y Jorge Abello; los técnicos de sonido Daniel Diez, Marcos Madrigal y los camarógrafos Iván Nápoles, Raúl Pérez Ureta y Luis Costales tienen una labor relevante en los años de este noticiero.{0}{0}El noticiero ofrece información nacional e internacional en los ámbitos artístico, cultural, deportivo, histórico y económico y tiene un incuestionable atractivo para los espectadores que se ven en las pantallas como partícipes activos de los cambios revolucionarios. Independientemente de que las noticias reseñadas ya son difundidas por otros medios como la radio, la prensa y la televisión, en el noticiero la información cobra otra dimensión por el valor de la imagen, la utilización de la música y porque el mismo aporta un carácter valorativo más trascendente. Utiliza los más diversos e ingeniosos recursos para comunicar un mensaje: caricaturas, dibujos animados, gráfica, trucaje, foto animación y el color en sus ediciones especiales. Utiliza siempre la fotografía en blanco y negro.", System.Environment.NewLine)
                 },
                 new Models.Data.TargetInfoDataModel
@@ -239,6 +267,7 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.Providers
                     PosterImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.poster-8.jpg"),
                     PosterWidth = 927,
                     PosterHeight = 1366,
+                    Author = authorErick,
                     Direction = "Arturo Sotto"
                 },
                 new Models.Data.TargetInfoDataModel
@@ -286,6 +315,7 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.Providers
                     PosterImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.poster-12.jpg"),
                     PosterWidth = 927,
                     PosterHeight = 1366,
+                    Author = authorPablo,
                     Year = 1941,
                     Direction = "Orson Welles",
                     Cast = "Orson Welles, Joseph Cotten, Dorothy Comingore, Everett Sloane",
@@ -405,6 +435,7 @@ namespace MOROPO.CPCC.CinemaStreet.Arsmart.Providers
                     PosterImage = Xamarin.Forms.ImageSource.FromResource("MOROPO.CPCC.CinemaStreet.Arsmart.Resources.Image.poster-18.jpg"),
                     PosterWidth = 927,
                     PosterHeight = 1366,
+                    Author = authorErnestoP,
                     Direction = "Juan Padrón"
                 },
                 new Models.Data.TargetInfoDataModel
